@@ -166,7 +166,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/krem"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -176,8 +175,8 @@
             android:layout_height="56dp"
             android:layout_marginEnd="6dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_btn
-            android:text="🗓️ Tambahkan Jadwal ke Kalender"
+            android:background="@drawable/bg_btn"
+            android:text="🗓Tambahkan Jadwal ke Kalender"
             android:textAllCaps="false"
             android:textSize="12sp" />
 
@@ -188,7 +187,7 @@
             android:layout_marginStart="6dp"
             android:layout_weight="1"
             android:background="@drawable/bg_btn"
-            android:text="📞 Hubungi Panitia"
+            android:text="Hubungi Panitia"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="12sp" />
