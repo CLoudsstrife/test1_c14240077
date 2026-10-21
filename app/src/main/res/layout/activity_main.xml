@@ -8,18 +8,36 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Judul halaman -->
-    <TextView
+    <!-- Top bar -->
+    <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#2A7E19"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Campus Activity"
-        android:textColor="@android:color/white"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Campus Activity"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bell" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,52 +50,60 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Banner -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_header_profile"
-                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
                 android:padding="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="IKUTI DAN JANGAN LEWATKAN"
-                    android:textColor="#2A7E19"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IKUTI DAN JANGAN LEWATKAN"
+                        android:textColor="#2A7E19"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kegiatan\nKampus"
+                        android:textColor="#2A7E19"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dapatkan informasi kegiatan\nkampus terbaru di sini."
+                        android:textColor="#2A7E19"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Kegiatan\nKampus"
-                    android:textColor="#2A7E19"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dapatkan informasi kegiatan\nkampus terbaru di sini."
-                    android:textColor="#2A7E19"
-                    android:textSize="14sp" />
+                    android:text="🏫"
+                    android:textSize="56sp" />
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/ic_calender" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Daftar Kegiatan"
+                android:text="📅 Daftar Kegiatan"
                 android:textColor="#2A7E19"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <!-- Card 1: Seminar -->
             <LinearLayout
                 android:id="@+id/cardSeminar"
                 android:layout_width="match_parent"
@@ -87,194 +113,289 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SEMINAR"
-                    android:textColor="#2A7E19"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Seminar Teknologi 2026"
-                    android:textColor="#222222"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\"Membangun Aplikasi Android Modern\""
-                    android:textSize="14sp" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_calender" />
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_seminar" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="20 Oktober 2026"
-                    android:textColor="#222222" />
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:text="SEMINAR"
+                        android:textColor="#2A7E19"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Seminar Teknologi 2026"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\"Membangun Aplikasi Android Modern\""
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 20 Oktober 2026"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🕘 09.00 - 12.00 WIB"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Auditorium Kampus XYZ"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_clock" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="09.00 - 12.00 WIB"
-                    android:textColor="#222222" />
-
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_location" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Auditorium Kampus XYZ"
-                    android:textColor="#222222" />
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron" />
             </LinearLayout>
 
-            <!-- Card 2: Workshop -->
             <LinearLayout
                 android:id="@+id/cardWorkshop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_card"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="WORKSHOP"
-                    android:textColor="#2A7E19"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                <ImageView
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_workshop" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Workshop UI/UX Design"
-                    android:textColor="#222222"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\"Dari Ide Menjadi Desain yang Menarik\""
-                android:textColor="#666666"
-                android:textSize="14sp"
-                android:textStyle="italic" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:text="WORKSHOP"
+                        android:textColor="#2A7E19"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="📅 25 Oktober 2026"
-                    android:textColor="#222222" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Workshop UI/UX Design"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🕘 13.00 - 16.00 WIB"
-                    android:textColor="#222222" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\"Dari Ide Menjadi Desain yang Menarik\""
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    android:textStyle="italic" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="📍 Lab. Komputer Lt. 3"
-                    android:textColor="#222222" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 25 Oktober 2026"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🕘 13.00 - 16.00 WIB"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Lab. Komputer Lt. 3"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron" />
             </LinearLayout>
 
-            <!-- Card 3: Campus Fair -->
             <LinearLayout
                 android:id="@+id/cardEvent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_card"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="EVENT"
-                    android:textColor="#2A7E19"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Campus Fair 2026"
-                    android:textColor="#222222"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="\"Temukan Peluang untuk Masa Depanmu\""
-                android:textColor="#666666"
-                android:textSize="14sp"
-                android:textStyle="italic" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_calender" />
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_event" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="28 Oktober 2026"
-                    android:textColor="#222222" />
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_chip"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:text="EVENT"
+                        android:textColor="#2A7E19"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Campus Fair 2026"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\"Temukan Peluang untuk Masa Depanmu\""
+                    android:textColor="#666666"
+                    android:textSize="11sp"
+                    android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="📅 28 Oktober 2026"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🕘 08.00 - 15.00 WIB"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Lapangan Kampus XYZ"
+                        android:textColor="#222222"
+                        android:textSize="11sp" />
+                </LinearLayout>
 
                 <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_clock" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="08.00 - 15.00 WIB"
-                    android:textColor="#222222" />
-
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_location" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lapangan Kampus XYZ"
-                    android:textColor="#222222" />
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chevron" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎉 Acara Saya"
+                    android:textColor="#2A7E19"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTambahAcara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn"
+                    android:paddingHorizontal="16dp"
+                    android:text="➕ Tambah"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvKosong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Belum ada acara. Tekan Tambah untuk membuat acara."
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/containerAcara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical" />
         </LinearLayout>
     </ScrollView>
 
@@ -291,10 +412,10 @@
             android:layout_height="52dp"
             android:layout_marginEnd="6dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_btn"
+            android:background="@drawable/bg_btn_outline"
             android:text="ℹ️ Tentang Aplikasi"
             android:textAllCaps="false"
-            android:textColor="@android:color/white" />
+            android:textColor="#2A7E19" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnDeveloper"

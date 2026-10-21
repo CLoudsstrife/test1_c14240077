@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="hijau">#4F7355</color>
+    <color name="hijau_tua">#3E5C44</color>
+    <color name="hijau_muda">#DDE8DA</color>
+    <color name="krem">#F4F1E8</color>
+    <color name="kartu">#FFFDF7</color>
+    <color name="teks">#1F2A24</color>
+    <color name="teks_abu">#6B7280</color>
 </resources>
